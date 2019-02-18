@@ -11,18 +11,25 @@ def compliment(num_of_compliment, num_s_compliment):
         return result
 
 
-def decimal_to_binary(num):
+def decimal_to_binary(number):
     binary = ""
     div = 3
     while(div >= 2):
-        div = num // 2
-        remainder = num % 2
-        print("num -> {}\ndiv -> {}\nremainder -> {}".format(num, div, remainder))
-        num = div
+        div = number // 2
+        remainder = number % 2
+        number = div
         binary += str(remainder)
         if div < 2:
             binary += str(div)
     return binary[::-1]
 
-num = int(input("Sayi : "))
-print(decimal_to_binary(num))
+
+def d_radix_compliment(num):
+    num_of_d_radix = ""
+    for i in range(0, len(decimal_to_binary(num))):
+        if decimal_to_binary(num)[i] == "0":
+            num_of_d_radix += "1"
+        else:
+            num_of_d_radix += "0"
+    return num_of_d_radix
+
