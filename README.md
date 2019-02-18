@@ -1,1 +1,1 @@
-# Compliments of 1 to 10
+# Complements of 1 to 10
