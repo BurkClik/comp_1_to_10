@@ -1,4 +1,4 @@
-def compliment(num_of_complement, num_s_complement):
+def complement(num_of_complement, num_s_complement):
     if int(num_of_complement) == 10:
         result = (10 ** len(str(num_s_complement))) - int(num_s_complement)
         return result
