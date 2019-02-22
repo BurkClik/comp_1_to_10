@@ -37,15 +37,12 @@ def d_radix_complement(num):
 
 def radix_complement(numb):
     decimal = 0
-    #print("Uzunluk : {}".format(len(d_radix_complement(10))))
     for i in range(0, len(d_radix_complement(numb))):
-        #print("Numara : {}".format(int(d_radix_complement(numb)[-(i+1)])))
         if int(d_radix_complement(numb)[-(i+1)]) == 0:
             pass
         else:
             print("2 ** i : {}".format(2**i))
             decimal += 2 ** i
-        #print("i : {}\ndecimal {}: ".format(i, decimal))
     temp = decimal_to_binary(decimal + 1)
     if len(decimal_to_binary(decimal + 1)) <= 3:
         while(len(temp) <= 3):
@@ -55,5 +52,3 @@ def radix_complement(numb):
         return temp
     else:    
         return decimal_to_binary(decimal+1)
-
-print("Decimal to binary -> {}\nDimenished radix complement -> {}\nRadix complement -> {}".format(decimal_to_binary(15), d_radix_complement(15), radix_complement(15)))
