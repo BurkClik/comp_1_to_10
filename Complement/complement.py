@@ -12,6 +12,7 @@ def complement(num_of_complement, num_s_complement):
 
 
 def decimal_to_binary(number):
+    """This function is converting decimal number to binary."""
     binary = ""
     div = 3
     while(div >= 2):
@@ -33,6 +34,7 @@ def d_radix_complement(num):
             num_of_d_radix += "0"
     return num_of_d_radix
 
+
 def radix_complement(numb):
     decimal = 0
     #print("Uzunluk : {}".format(len(d_radix_complement(10))))
@@ -44,8 +46,13 @@ def radix_complement(numb):
             print("2 ** i : {}".format(2**i))
             decimal += 2 ** i
         #print("i : {}\ndecimal {}: ".format(i, decimal))
+    temp = decimal_to_binary(decimal + 1)
     if len(decimal_to_binary(decimal + 1)) <= 3:
-        return "0" + decimal_to_binary(decimal + 1)
+        while(len(temp) <= 3):
+            temp = "0" + decimal_to_binary(decimal + 1)
+            temp_result = temp
+            temp = "0" + temp_result
+        return temp
     else:    
         return decimal_to_binary(decimal+1)
 
