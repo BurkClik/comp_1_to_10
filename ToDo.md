@@ -8,6 +8,7 @@
 - [✓] 1'e göre tümleyen alan fonksiyon yazılacak.
 - [✓] 2'ye göre tümleyen alan fonksiyon yazılacak.
     - [✓] Alınan binary uzunluğu kadar 2'ye göre tümleyen alındığında aynı uzunlukta olacak
+    - [] Alınan hatayı düzelt
 - [] Try-Except ile hatalar yakalanacak.
 - [] Compliment fonskiyonu döngüye sokulacak.
 - [] Pythonla arayüz hazırlanacak.
