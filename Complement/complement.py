@@ -1,4 +1,5 @@
 def complement(num_of_complement, num_s_complement):
+    """num_s_complenet, num_of_complement'e complementi"""
     if int(num_of_complement) == 10:
         result = (10 ** len(str(num_s_complement))) - int(num_s_complement)
         return result
@@ -43,23 +44,25 @@ def d_radix_complement(num):
 
 
 def radix_complement(numb):
-    # decimal = 0
-    # for i in range(0, len(d_radix_complement(numb))):
-    #     if int(d_radix_complement(numb)[-(i + 1)]) == 0:
-    #         pass
-    #     else:
-    #         decimal += 2 ** i
     temp = decimal_to_binary(binary_to_decimal(d_radix_complement(numb)) + 1)
     if len(decimal_to_binary(binary_to_decimal(d_radix_complement(numb)) + 1)) <= 3:
         while(len(temp) <= 3):
-            temp = "0" + decimal_to_binary(binary_to_decimal(d_radix_complement(numb)) + 1)
+            temp = "0" + \
+                decimal_to_binary(binary_to_decimal(
+                    d_radix_complement(numb)) + 1)
             temp_result = temp
             temp = "0" + temp_result
         return temp
-    else:    
+    else:
         return decimal_to_binary(binary_to_decimal(d_radix_complement(numb)) + 1)
+
 
 def addition(*args):
     pass
 
-print(radix_complement(3))
+
+""" print(complement("9", "27"))
+print(decimal_to_binary(11))
+print(binary_to_decimal("1011"))
+print(d_radix_complement(11))
+print(radix_complement(11)) """
